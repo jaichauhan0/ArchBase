@@ -2,7 +2,7 @@
 
 ln -sf /usr/share/zoneinfo/Asia/kolkata /etc/localtime
 hwclock --systohc
-sed -i 's/^# *en_IN.UTF-8 UTF-8/en_IN.UTF-8 UTF-8/' /etc/locale.gen
+sudo sed -i 's/^#\(en_IN UTF-8\)/\1/' /etc/locale.gen
 locale-gen
 echo "LANG=en_IN.UTF-8" >> /etc/locale.conf
 echo "ArchLinux" >> /etc/hostname
