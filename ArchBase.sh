@@ -5,9 +5,9 @@ hwclock --systohc
 sudo sed -i 's/^#\(en_IN UTF-8\)/\1/' /etc/locale.gen
 locale-gen
 echo "LANG=en_IN.UTF-8" >> /etc/locale.conf
-echo "ArchLinux" >> /etc/hostname
+echo "ArchLinux" >> /etc/hostname  # You can change your hostname as you wish.
 echo "127.0.1.1 ArchLinux.localdomain ArchLinux" >> /etc/hosts
-echo root:password | chpasswd
+echo root:password | chpasswd   #password is "password" you can change your password as you want.
 
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
@@ -34,8 +34,8 @@ systemctl enable fstrim.timer
 systemctl enable ufw
 systemctl enable acpid
 
-useradd -m -G wheel arch
-echo arch:password | chpasswd
+useradd -m -G wheel arch # Change username as you wish.
+echo arch:password | chpasswd #password is "password" you can change your password as you want.
 
 
 echo "arch ALL=(ALL) ALL" >> /etc/sudoers.d/arch
