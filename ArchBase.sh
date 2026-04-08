@@ -6,8 +6,6 @@ sudo sed -i 's/^#\(en_IN UTF-8\)/\1/' /etc/locale.gen
 locale-gen
 echo "LANG=en_IN.UTF-8" >> /etc/locale.conf
 echo "ArchLinux" >> /etc/hostname
-echo "127.0.0.1 localhost" >> /etc/hosts
-echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 ArchLinux.localdomain ArchLinux" >> /etc/hosts
 echo root:password | chpasswd
 
